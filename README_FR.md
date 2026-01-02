@@ -29,6 +29,8 @@ Le "Mode Agentique" de Antigravity est puissant. Ce toolkit lui donne les **plan
 | 🏗️ **Créer** | `web-artifacts-builder` | Générez des **Artefacts React** complexes. |
 | 🛡️ **Sécurité** | `security-audit` | Scannez votre code pour trouver failles et secrets. |
 | 🧹 **Nettoyer** | `code-refactor` | Nettoyez la dette technique proprement. |
+| ✅ **Setup** | `setup-check` | Vérifiez votre environnement (Node, Python, Git). |
+| 🤖 **Orchestrer** | `parallel-orchestrator` | **Nouveau !** Déployez une équipe multi-agents. |
 
 ---
 
@@ -43,8 +45,10 @@ Il vous guidera vers le bon outil pour votre besoin.
 
 ### ⚡ Démarrage Rapide
 
-1. Assurez-vous que ce dépôt est accessible par votre agent.
-2. Tapez une commande comme :
+1. **Vérifiez votre environnement** :
+    > "Lance le workflow **setup-check**."
+2. Assurez-vous que ce dépôt est accessible par votre agent.
+3. Tapez une commande comme :
     > "Utilise **frontend-design** pour créer un dashboard sombre."
 
 👉 **[Lire le Tutoriel Complet](./TUTORIAL_FR.md)** pour les instructions détaillées.

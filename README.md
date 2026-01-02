@@ -29,6 +29,8 @@ Antigravity's "Agentic Mode" is powerful. This toolkit gives it the **structured
 | 🏗️ **Create** | `web-artifacts-builder` | Generate complex, multi-file **React Artifacts**. |
 | 🛡️ **Secure** | `security-audit` | Scan your code for vulnerabilities and secrets. |
 | 🧹 **Refactor** | `code-refactor` | Clean up technical debt safely and efficiently. |
+| ✅ **Setup** | `setup-check` | Verify your environment (Node, Python, Git). |
+| 🤖 **Orchestrate** | `parallel-orchestrator` | **New!** Deploy a multi-agent team in one session. |
 
 ---
 
@@ -43,8 +45,10 @@ It will guide you to the right tool for your specific needs.
 
 ### ⚡ Quick Start
 
-1. Ensure this repository is in your agent's workspace.
-2. Type a command like:
+1. **Check your environment**:
+    > "Run the **setup-check** workflow."
+2. Ensure this repository is in your agent's workspace.
+3. Type a command like:
     > "Use **frontend-design** to create a dark-mode dashboard."
 
 👉 **[Read the Full Tutorial](./TUTORIAL.md)** for detailed instructions.
