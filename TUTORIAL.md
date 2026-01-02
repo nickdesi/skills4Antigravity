@@ -43,6 +43,24 @@ Antigravity looks for workflows in the `.agent/workflows/` directory. By having 
 **Command**:
 > "Run the web-artifacts-builder workflow to make a dashboard."
 
+### 5. Master Router (`router`)
+
+**Use this for**: When you don't know which workflow to pick.
+**Command**:
+> "Run the router workflow."
+
+### 6. Security Audit (`security-audit`)
+
+**Use this for**: Scanning code for vulnerabilities and secrets.
+**Command**:
+> "Run a security audit on this project."
+
+### 7. Code Refactor (`code-refactor`)
+
+**Use this for**: Cleaning up technical debt safely.
+**Command**:
+> "Use the code-refactor workflow to clean up utilities.py."
+
 ## Tips for Best Results
 
 - **Be Specific**: When invoking a workflow, provide context.

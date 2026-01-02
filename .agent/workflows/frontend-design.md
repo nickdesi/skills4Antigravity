@@ -40,4 +40,12 @@ Implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
 - Cohesive with a clear aesthetic point-of-view.
 - Meticulously refined.
 
+## 4. Verification
+
+Before finalizing, verify:
+
+- **Responsive**: Does it stack correctly on mobile? (Resize window to 375px).
+- **Accessibility**: logical heading structure? Contrast ratio > 4.5:1? All interactables focusable?
+- **Console**: No red errors in the browser console.
+
 Remember: Antigravity is capable of extraordinary creative work. Don't hold back.

@@ -82,3 +82,9 @@ with sync_playwright() as p:
 - Always close the browser when done.
 - Use descriptive selectors: `text=`, `role=`, CSS selectors, or IDs.
 - Add appropriate waits: `page.wait_for_selector()` or `page.wait_for_timeout()`.
+
+## 5. Troubleshooting
+
+- **"Browser not found"**: If Playwright can't find Chromium, run `playwright install chromium` inside the python environment.
+- **Timeouts**: If `wait_for_selector` fails, try increasing the timeout `page.wait_for_selector('...', timeout=10000)` or check if the element is inside a Shadow DOM.
+- **Headless mode**: If debugging is hard, set `headless=False` to see the browser actions live.

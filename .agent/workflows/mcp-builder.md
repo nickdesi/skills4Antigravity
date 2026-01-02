@@ -62,6 +62,13 @@ description: Guide for creating high-quality MCP (Model Context Protocol) server
 - **TypeScript**: `npm run build`
 - **Verify**: Use the MCP Inspector: `npx @modelcontextprotocol/inspector`
 
+### 3.3 Debugging & Common Issues
+
+- **Connection Refused**: Check if the server is running and the port matches.
+- **Zod Parse Error**: Your input validation is too strict or the agent is sending malformed data. Relax constraints or improve descriptions.
+- **Empty Response**: Ensure your tool returns a JSON object, even if empty (`{}`).
+- **Inspector Tips**: Use the "Tools" tab to manually invoke each tool with sample JSON.
+
 ## 4. Create Evaluations (Optional)
 
 Create prompt-based evaluations to test if Antigravity can effectively use your MCP server.
