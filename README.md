@@ -10,6 +10,10 @@ Skills help the agent complete complex tasks reliably.
 
 See [WORKFLOWS.md](./WORKFLOWS.md) for the list of available workflows and how to run them.
 
+## Getting Started
+
+Check out the [Tutorial](./TUTORIAL.md) to learn how to use these skills with your Antigravity agent.
+
 ## About This Repository
 
 This repository contains skills that demonstrate what's possible with the agentic skills system. These skills range from creative applications to technical tasks.
