@@ -8,7 +8,7 @@ To test local web applications, write native Python Playwright scripts.
 
 **Helper Scripts Available**:
 
-- `skills/webapp-testing/scripts/with_server.py` - Manages server lifecycle.
+- `.agent/scripts/webapp-testing/with_server.py` - Manages server lifecycle.
 
 **Always run scripts with `--help` first** to see usage.
 
@@ -21,7 +21,7 @@ User task → Is it static HTML?
     │         └─ Fails/Incomplete → Treat as dynamic (below)
     │
     └─ No (dynamic webapp) → Is the server already running?
-        ├─ No → Run: python skills/webapp-testing/scripts/with_server.py --help
+        ├─ No → Run: python .agent/scripts/webapp-testing/with_server.py --help
         │        Then use the helper + write simplified Playwright script
         │
         └─ Yes → Reconnaissance-then-action:
@@ -36,16 +36,19 @@ User task → Is it static HTML?
 **Single server:**
 
 ```bash
-python skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- python your_automation.py
+python .agent/scripts/webapp-testing/with_server.py --server "npm run dev" --port 5173 -- python your_automation.py
 ```
 
 **Multiple servers (e.g., backend + frontend):**
 
 ```bash
-python skills/webapp-testing/scripts/with_server.py \
+```bash
+python .agent/scripts/webapp-testing/with_server.py \
   --server "cd backend && python server.py" --port 3000 \
   --server "cd frontend && npm run dev" --port 5173 \
   -- python your_automation.py
+```
+
 ```
 
 **Automation Script Template**:
