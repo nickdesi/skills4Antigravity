@@ -1,27 +1,54 @@
-# Skills for Antigravity
+# 🚀 Skills4Antigravity
 
-([Version française](./README_FR.md))
+> **Supercharge your Agent with Native Workflows.**
+> *Des super-pouvoirs pour votre agent.*
 
-This repository contains **Antigravity's implementation** of skills and workflows.
-Skills help the agent complete complex tasks reliably.
+[![English](https://img.shields.io/badge/lang-English-blue)](./README.md) [![Français](https://img.shields.io/badge/lang-Français-red)](./README_FR.md)
 
-## Antigravity Workflows
+---
 
-> [!IMPORTANT]
-> The primary way to use these skills is through **Native Workflows**.
+**Skills4Antigravity** is a collection of high-quality, executable workflows designed to make your AI agent smarter, more reliable, and more creative.
 
-See [WORKFLOWS.md](./WORKFLOWS.md) for the list of available workflows and how to run them.
+Instead of writing long prompts, simply **invoke a workflow** to get professional results instantly.
 
-## Getting Started
+## ✨ What's Inside?
 
-Check out the [Tutorial](./TUTORIAL.md) to learn how to use these skills with your Antigravity agent.
+| Category | Workflow | Description |
+| :--- | :--- | :--- |
+| 🎨 **Design** | `frontend-design` | Create distinctive, award-winning UI designs. No "AI Slop". |
+| 🛠️ **Build** | `mcp-builder` | Build robust **MCP Servers** (TypeScript/Python) to connect data. |
+| 🧪 **Test** | `webapp-testing` | Auto-test your localhost apps with **Playwright**. |
+| 🏗️ **Create** | `web-artifacts-builder` | Generate complex, multi-file **React Artifacts**. |
+| 🛡️ **Secure** | `security-audit` | Scan your code for vulnerabilities and secrets. |
+| 🧹 **Refactor** | `code-refactor` | Clean up technical debt safely and efficiently. |
 
-## About This Repository
+---
 
-This repository contains skills that demonstrate what's possible with the agentic skills system. These skills range from creative applications to technical tasks.
+## 🚦 How to Use
 
-Each skill is usually self-contained. We have converted the most useful skills into **Executable Workflows** located in `.agent/workflows/`.
+### 🤷 Don't know where to start?
 
-## Disclaimer
+Just ask your agent:
+> "Help me!" or "Run the **router** workflow."
 
-**These skills are provided for demonstration purposes.** Always verify the output.
+It will guide you to the right tool for your specific needs.
+
+### ⚡ Quick Start
+
+1. Ensure this repository is in your agent's workspace.
+2. Type a command like:
+    > "Use **frontend-design** to create a dark-mode dashboard."
+
+👉 **[Read the Full Tutorial](./TUTORIAL.md)** for detailed instructions.
+
+---
+
+## 📂 Repository Structure
+
+* 📂 `.agent/workflows/` → **The Brains**. The actual workflow files the agent reads.
+* 📄 `TUTORIAL.md` → Step-by-step guide for humans.
+* 📄 `WORKFLOWS.md` → detailed technical reference.
+
+---
+
+*Made with ❤️ for the Antigravity Community.*

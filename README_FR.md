@@ -1,27 +1,54 @@
-# Skills pour Antigravity
+# 🚀 Skills4Antigravity
 
-([English version](./README.md))
+> **Donnez des super-pouvoirs à votre Agent.**
+> *Supercharge your Agent with Native Workflows.*
 
-Ce dépôt contient l'implémentation par **Antigravity** de skills et de workflows.
-Les skills aident l'agent à accomplir des tâches complexes de manière fiable.
+[![English](https://img.shields.io/badge/lang-English-blue)](./README.md) [![Français](https://img.shields.io/badge/lang-Français-red)](./README_FR.md)
 
-## Workflows Antigravity
+---
 
-> [!IMPORTANT]
-> La meilleure façon d'utiliser ces skills est à travers les **Workflows Natifs**.
+**Skills4Antigravity** est une collection de workflows exécutables de haute qualité, conçus pour rendre votre agent AI plus intelligent, plus fiable et plus créatif.
 
-Consultez [WORKFLOWS.md](./WORKFLOWS.md) pour la liste des workflows disponibles et comment les exécuter.
+Au lieu d'écrire de longs prompts, **invoquez simplement un workflow** pour obtenir des résultats professionnels instantanément.
 
-## Commencer
+## ✨ Le Contenu
 
-Consultez le [Tutoriel](./TUTORIAL_FR.md) pour apprendre à utiliser ces skills avec votre agent Antigravity.
+| Catégorie | Workflow | Description |
+| :--- | :--- | :--- |
+| 🎨 **Design** | `frontend-design` | Créez des UIs dignes d'un award. Pas de "AI Slop". |
+| 🛠️ **Build** | `mcp-builder` | Créez des **Serveurs MCP** (TS/Python) robustes. |
+| 🧪 **Test** | `webapp-testing` | Testez vos apps en local automatiquement avec **Playwright**. |
+| 🏗️ **Créer** | `web-artifacts-builder` | Générez des **Artefacts React** complexes. |
+| 🛡️ **Sécurité** | `security-audit` | Scannez votre code pour trouver failles et secrets. |
+| 🧹 **Nettoyer** | `code-refactor` | Nettoyez la dette technique proprement. |
 
-## À propos de ce dépôt
+---
 
-Ce dépôt contient des skills qui démontrent les possibilités du système de skills agentiques. Ces skills vont des applications créatives aux tâches techniques.
+## 🚦 Comment l'utiliser
 
-Chaque skill est généralement autonome. Nous avons converti les skills les plus utiles en **Workflows Exécutables** situés dans `.agent/workflows/`.
+### 🤷 Vous ne savez pas par où commencer ?
 
-## Avertissement
+Dites simplement à l'agent :
+> "Aide-moi !" ou "Lance le workflow **router**".
 
-**Ces skills sont fournis à des fins de démonstration.** Vérifiez toujours le résultat.
+Il vous guidera vers le bon outil pour votre besoin.
+
+### ⚡ Démarrage Rapide
+
+1. Assurez-vous que ce dépôt est accessible par votre agent.
+2. Tapez une commande comme :
+    > "Utilise **frontend-design** pour créer un dashboard sombre."
+
+👉 **[Lire le Tutoriel Complet](./TUTORIAL_FR.md)** pour les instructions détaillées.
+
+---
+
+## 📂 Structure du Dépôt
+
+* 📂 `.agent/workflows/` → **Le Cerveau**. Les fichiers que l'agent lit et exécute.
+* 📄 `TUTORIAL_FR.md` → Le guide pas-à-pas pour les humains.
+* 📄 `WORKFLOWS.md` → La référence technique détaillée.
+
+---
+
+*Fait avec ❤️ pour la Communauté Antigravity.*
