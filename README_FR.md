@@ -1,15 +1,23 @@
 # 🚀 Skills4Antigravity
 
-> **Donnez des super-pouvoirs à votre Agent.**
-> *Supercharge your Agent with Native Workflows.*
+> **Le Compagnon Essentiel pour votre Agent Google Antigravity.**
+> *The Essential Companion for your Google Antigravity Agent.*
 
-[![English](https://img.shields.io/badge/lang-English-blue)](./README.md) [![Français](https://img.shields.io/badge/lang-Français-red)](./README_FR.md)
+[![English](https://img.shields.io/badge/lang-English-blue)](./README.md) [![Français](https://img.shields.io/badge/lang-Français-red)](./README_FR.md) [![Conçu pour Google Antigravity](https://img.shields.io/badge/Conçu%20pour-Google%20Antigravity-4285F4)](https://deepmind.google/technologies/gemini/)
 
 ---
 
-**Skills4Antigravity** est une collection de workflows exécutables de haute qualité, conçus pour rendre votre agent AI plus intelligent, plus fiable et plus créatif.
+**Skills4Antigravity** est la boîte à outils officielle de la communauté conçue **spécifiquement pour Google Antigravity**. Elle fournit une collection de workflows natifs et exécutables qui débloquent tout le potentiel de votre agent.
 
-Au lieu d'écrire de longs prompts, **invoquez simplement un workflow** pour obtenir des résultats professionnels instantanément.
+En utilisant ces workflows, vous transformez Google Antigravity d'un simple assistant de chat en un **ingénieur de classe production**.
+
+## ✨ Pourquoi utiliser ceci avec Google Antigravity ?
+
+Le "Mode Agentique" de Antigravity est puissant. Ce toolkit lui donne les **plans structurés** dont il a besoin pour :
+
+* Construire des applications complexes sans se perdre.
+* Se connecter à des outils externes via MCP.
+* Auditer et refactoriser le code comme un développeur senior.
 
 ## ✨ Le Contenu
 

@@ -2,7 +2,9 @@
 
 ([English version](./TUTORIAL.md))
 
-Ce guide explique comment utiliser les **workflows natifs** inclus dans ce dépôt avec votre agent Google Antigravity.
+Ce guide explique comment utiliser les **workflows natifs** de ce dépôt pour débloquer tout le potentiel de votre **agent Google Antigravity**.
+
+Conçus spécifiquement pour les capacités agentiques de Antigravity, ces workflows fournissent le raisonnement structuré nécessaire aux tâches d'ingénierie complexes.
 
 ## Prérequis
 

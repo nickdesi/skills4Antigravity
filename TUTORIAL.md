@@ -2,7 +2,9 @@
 
 ([Version française](./TUTORIAL_FR.md))
 
-This guide explains how to use the **native workflows** included in this repository with your Google Antigravity agent.
+This guide explains how to use the **native workflows** included in this repository to unlock the full potential of your **Google Antigravity agent**.
+
+Designed specifically for Antigravity's agentic capabilities, these workflows provide the structured reasoning needed for complex engineering tasks.
 
 ## Prerequisites
 
