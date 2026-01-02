@@ -1,5 +1,7 @@
 # How to use Skills with Google Antigravity
 
+([Version française](./TUTORIAL_FR.md))
+
 This guide explains how to use the **native workflows** included in this repository with your Google Antigravity agent.
 
 ## Prerequisites

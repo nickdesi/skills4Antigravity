@@ -1,5 +1,7 @@
 # Skills for Antigravity
 
+([Version française](./README_FR.md))
+
 This repository contains **Antigravity's implementation** of skills and workflows.
 Skills help the agent complete complex tasks reliably.
 
