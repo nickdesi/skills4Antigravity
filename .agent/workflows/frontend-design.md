@@ -1,28 +1,43 @@
 ---
-description: Create distinctive, production-grade frontend interfaces with high design quality.
+description: Create distinctive, production-grade frontend interfaces with high design quality. High-detail workflow.
 ---
 
 # Frontend Design Workflow
 
+This workflow guides the creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics.
+
 ## 1. Design Thinking
 
-**Before coding**, define the aesthetic direction:
+**Before coding**, understand the context and commit to a BOLD aesthetic direction:
 
-- **Purpose**: What problem does this solve?
-- **Tone**: Pick an extreme (Minimalist, Maximalist, Retro, Industrial, etc.).
-- **Constraints**: Technical requirements.
-- **Differentiation**: What makes this unforgettable?
+- **Purpose**: What problem does this interface solve? Who uses it?
+- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc.
+- **Constraints**: Technical requirements (framework, performance, accessibility).
+- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
 
-## 2. Aesthetics Guidelines
+**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
 
-- **Typography**: choice distinctive fonts. Avoid generic Inter/Arial.
-- **Color**: Commit to a cohesive palette. Use CSS variables.
-- **Motion**: Use staggered reveals, scroll triggers, and micro-interactions.
-- **Composition**: Use unexpected layouts, asymmetry, or grid-breaking elements.
-- **Details**: Add noise, gradients, shadows, or custom cursors.
+## 2. Frontend Aesthetics Guidelines
+
+Focus on:
+
+- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter. Pair a distinctive display font with a refined body font.
+- **Color & Theme**: Commit to a cohesive aesthetic. USe CSS variables. Dominant colors with sharp accents outperform timid palettes.
+- **Motion**: Use animations for effects and micro-interactions. Focus on high-impact moments (staggered reveals).
+- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Generous negative space OR controlled density.
+- **Backgrounds & Visual Details**: Create atmosphere. Add contextual effects, noise textures, geometric patterns, layered transparencies, custom cursors.
+
+**NEVER** use generic AI-generated aesthetics like overused font families, cliched color schemes (purple gradients), or cookie-cutter layouts.
+
+**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code. Minimalist designs need restraint and precision.
 
 ## 3. Implementation
 
-- Implementing working code (HTML/CSS/JS or React).
-- Ensure it is production-grade and functional.
-- **NO GENERIC AI AESTHETICS** (No purple gradients on white, no cookie-cutter layouts).
+Implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
+
+- Production-grade and functional.
+- Visually striking and memorable.
+- Cohesive with a clear aesthetic point-of-view.
+- Meticulously refined.
+
+Remember: Antigravity is capable of extraordinary creative work. Don't hold back.

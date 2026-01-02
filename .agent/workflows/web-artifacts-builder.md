@@ -1,37 +1,54 @@
 ---
-description: Build elaborate, multi-component React/Tailwind/Shadcn artifacts.
+description: Build elaborate, multi-component React/Tailwind/Shadcn artifacts. High-detail workflow.
 ---
 
 # Web Artifacts Builder Workflow
 
-## 1. Initialize Project
+To build powerful frontend artifacts (e.g. for Antigravity), follow these steps:
 
-Run the initialization script from the repo root:
+1. Initialize the frontend repo using `skills/web-artifacts-builder/scripts/init-artifact.sh`.
+2. Develop your artifact by editing the generated code.
+3. Bundle all code into a single HTML file using `skills/web-artifacts-builder/scripts/bundle-artifact.sh`.
+4. Display artifact to user.
+
+**Stack**: React 18 + TypeScript + Vite + Parcel (bundling) + Tailwind CSS + shadcn/ui.
+
+## 1. Quick Start
+
+### Step 1: Initialize Project
+
+Run the initialization script:
 
 ```bash
-bash scripts/init-artifact.sh <project-name>
+bash skills/web-artifacts-builder/scripts/init-artifact.sh <project-name>
 cd <project-name>
 ```
 
-*This sets up React, TypeScript, Tailwind, Shadcn, and Parcel.*
+This creates a fully configured project with:
 
-## 2. Develop
+- React + TypeScript (via Vite)
+- Tailwind CSS 3.4.1 with shadcn/ui theming
+- Path aliases (`@/`)
+- 40+ shadcn/ui components pre-installed
 
-- Edit the generated files in the `<project-name>` directory.
-- Use Shadcn components (pre-installed).
-- Design according to high aesthetic standards.
+### Step 2: Develop Your Artifact
 
-## 3. Bundle
+Edit the files in the generated project. Avoid "AI slop" aesthetics (inter font, purple gradients, etc.).
 
-Bundle the project into a single HTML file:
+### Step 3: Bundle to Single HTML File
+
+To bundle the React app into a single HTML artifact:
 
 ```bash
-bash scripts/bundle-artifact.sh
+bash skills/web-artifacts-builder/scripts/bundle-artifact.sh
 ```
 
-*Creates `bundle.html` with inlined assets.*
+This creates `bundle.html` - a self-contained artifact with all JavaScript, CSS, and dependencies inlined. This file can be directly shared with the user.
 
-## 4. Delivery
+### Step 4: Share Artifact
 
-- Share the `bundle.html` file with the user.
-- (Optional) Test with Playwright if requested.
+Share the bundled HTML file (`bundle.html`) with the user.
+
+## 2. Reference
+
+- [shadcn/ui components](https://ui.shadcn.com/docs/components)

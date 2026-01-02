@@ -1,50 +1,84 @@
 ---
-description: Toolkit for interacting with and testing local web applications using Playwright.
+description: Toolkit for interacting with and testing local web applications using Playwright. High-detail workflow.
 ---
 
 # Web Application Testing Workflow
 
-## 1. Choose Approach
+To test local web applications, write native Python Playwright scripts.
 
-- **Static HTML**: Read file directly and identify selectors.
-- **Dynamic Webapp**:
-  - If server NOT running: Use `scripts/with_server.py`.
-  - If server running: Proceed to Reconnaissance.
+**Helper Scripts Available**:
 
-## 2. Start Server (if needed)
+- `skills/webapp-testing/scripts/with_server.py` - Manages server lifecycle.
 
-**Single Server**:
+**Always run scripts with `--help` first** to see usage.
 
-```bash
-python scripts/with_server.py --server "npm run dev" --port 5173 -- python your_automation.py
+## 1. Decision Tree: Choosing Your Approach
+
+```
+User task → Is it static HTML?
+    ├─ Yes → Read HTML file directly to identify selectors
+    │         ├─ Success → Write Playwright script using selectors
+    │         └─ Fails/Incomplete → Treat as dynamic (below)
+    │
+    └─ No (dynamic webapp) → Is the server already running?
+        ├─ No → Run: python skills/webapp-testing/scripts/with_server.py --help
+        │        Then use the helper + write simplified Playwright script
+        │
+        └─ Yes → Reconnaissance-then-action:
+            1. Navigate and wait for networkidle
+            2. Take screenshot or inspect DOM
+            3. Identify selectors from rendered state
+            4. Execute actions with discovered selectors
 ```
 
-**Multiple Servers**:
+## 2. Using with_server.py
+
+**Single server:**
 
 ```bash
-python scripts/with_server.py \
+python skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- python your_automation.py
+```
+
+**Multiple servers (e.g., backend + frontend):**
+
+```bash
+python skills/webapp-testing/scripts/with_server.py \
   --server "cd backend && python server.py" --port 3000 \
   --server "cd frontend && npm run dev" --port 5173 \
   -- python your_automation.py
 ```
 
-## 3. Reconnaissance
+**Automation Script Template**:
 
-1. **Navigate**: Go to URL and wait for `networkidle`.
+```python
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True) # Always launch chromium in headless mode
+    page = browser.new_page()
+    page.goto('http://localhost:5173') # Server already running and ready
+    page.wait_for_load_state('networkidle') # CRITICAL: Wait for JS to execute
+    # ... your automation logic
+    browser.close()
+```
+
+## 3. Reconnaissance-Then-Action Pattern
+
+1. **Inspect rendered DOM**:
 
    ```python
-   page.goto('http://localhost:5173')
-   page.wait_for_load_state('networkidle')
+   page.screenshot(path='/tmp/inspect.png', full_page=True)
+   content = page.content()
+   page.locator('button').all()
    ```
 
-2. **Inspect**: Take screenshot or dump DOM to accept selectors.
+2. **Identify selectors** from inspection results.
+3. **Execute actions** using discovered selectors.
 
-   ```python
-   page.screenshot(path='/tmp/inspect.png')
-   ```
+## 4. Best Practices
 
-## 4. Automation
-
-- Write Playwright script using discovered selectors.
-- Use `sync_playwright`.
-- ALWAYS close the browser: `browser.close()`.
+- **Use bundled scripts as black boxes**.
+- Use `sync_playwright()` for synchronous scripts.
+- Always close the browser when done.
+- Use descriptive selectors: `text=`, `role=`, CSS selectors, or IDs.
+- Add appropriate waits: `page.wait_for_selector()` or `page.wait_for_timeout()`.
