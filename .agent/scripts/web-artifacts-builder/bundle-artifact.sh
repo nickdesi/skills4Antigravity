@@ -1,7 +1,16 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 echo "📦 Bundling React app to single HTML artifact..."
+
+# Cleanup trap
+cleanup() {
+    local exit_code=$?
+    if [ $exit_code -ne 0 ]; then
+        echo "❌ process failed with exit code $exit_code"
+    fi
+}
+trap cleanup EXIT
 
 # Check if we're in a project directory
 if [ ! -f "package.json" ]; then
@@ -16,9 +25,26 @@ if [ ! -f "index.html" ]; then
   exit 1
 fi
 
+# Detect Package Manager
+PM='npm'
+EXEC='npx'
+INSTALL='npm install -D'
+
+if [ -f "pnpm-lock.yaml" ]; then
+    PM='pnpm'
+    EXEC='pnpm exec'
+    INSTALL='pnpm add -D'
+elif [ -f "yarn.lock" ]; then
+    PM='yarn'
+    EXEC='yarn'
+    INSTALL='yarn add -D'
+fi
+
+echo "🔧 Detected package manager: $PM"
+
 # Install bundling dependencies
 echo "📦 Installing bundling dependencies..."
-pnpm add -D parcel @parcel/config-default parcel-resolver-tspaths html-inline
+$INSTALL parcel @parcel/config-default parcel-resolver-tspaths html-inline
 
 # Create Parcel config with tspaths resolver
 if [ ! -f ".parcelrc" ]; then
@@ -37,14 +63,18 @@ rm -rf dist bundle.html
 
 # Build with Parcel
 echo "🔨 Building with Parcel..."
-pnpm exec parcel build index.html --dist-dir dist --no-source-maps
+$EXEC parcel build index.html --dist-dir dist --no-source-maps
 
 # Inline everything into single HTML
 echo "🎯 Inlining all assets into single HTML file..."
-pnpm exec html-inline dist/index.html > bundle.html
+$EXEC html-inline dist/index.html > bundle.html
 
 # Get file size
-FILE_SIZE=$(du -h bundle.html | cut -f1)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  FILE_SIZE=$(du -h bundle.html | cut -f1)
+else
+  FILE_SIZE=$(du -h bundle.html | cut -f1) # standard du output
+fi
 
 echo ""
 echo "✅ Bundle complete!"

@@ -1,7 +1,15 @@
 #!/bin/bash
 
-# Exit on error
-set -e
+# Exit on error, undefined var, pipe failure
+set -euo pipefail
+
+cleanup() {
+    local exit_code=$?
+    if [ $exit_code -ne 0 ]; then
+        echo "❌ Script failed with exit code $exit_code"
+    fi
+}
+trap cleanup EXIT
 
 # Detect Node version
 NODE_VERSION=$(node -v | cut -d'v' -f2 | cut -d'.' -f1)
