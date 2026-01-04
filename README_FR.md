@@ -27,8 +27,11 @@ Le "Mode Agentique" de Antigravity est puissant. Ce toolkit lui donne les **plan
 | 🛠️ **Build** | `mcp-builder` | Créez des **Serveurs MCP** (TS/Python) robustes. |
 | 🧪 **Test** | `webapp-testing` | Testez vos apps en local automatiquement avec **Playwright**. |
 | 🏗️ **Créer** | `web-artifacts-builder` | Générez des **Artefacts React** complexes. |
+| 🐛 **Debug** | `debugging-workflow` | Trouvez systématiquement la cause racine des bugs. |
 | 🛡️ **Sécurité** | `security-audit` | Scannez votre code pour trouver failles et secrets. |
+| ⚡ **Perf** | `performance-audit` | Analysez la taille du bundle et les optimisations. |
 | 🧹 **Nettoyer** | `code-refactor` | Nettoyez la dette technique proprement. |
+| 🚀 **Release** | `release-manager` | Automatisez le versioning, changelog et tag git. |
 | ✅ **Setup** | `setup-check` | Vérifiez votre environnement (Node, Python, Git). |
 | 🤖 **Orchestrer** | `parallel-orchestrator` | **Nouveau !** Déployez une équipe multi-agents. |
 

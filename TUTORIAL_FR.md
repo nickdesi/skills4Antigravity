@@ -27,7 +27,13 @@ Antigravity cherche les workflows dans le répertoire `.agent/workflows/`. En ay
 **Commande** :
 > "Utilise le workflow frontend-design pour créer une landing page pour un café."
 
-### 2. Test d'Application Web (`webapp-testing`)
+### 2. Parallel Orchestrator (`parallel-orchestrator`)
+
+**Utilisez ceci pour** : Déployer une équipe multi-agents pour résoudre des tâches complexes.
+**Commande** :
+> "Lance le parallel-orchestrator pour construire tout le backend."
+
+### 3. Test d'Application Web (`webapp-testing`)
 
 **Utilisez ceci pour** : Tester des applications web locales avec Playwright.
 **Commande** :
@@ -62,6 +68,30 @@ Antigravity cherche les workflows dans le répertoire `.agent/workflows/`. En ay
 **Utilisez ceci pour** : Nettoyer la dette technique proprement.
 **Commande** :
 > "Utilise le workflow code-refactor pour nettoyer utilities.py."
+
+### 8. Setup Check (`setup-check`)
+
+**Utilisez ceci pour** : Vérifier que votre environnement est prêt.
+**Commande** :
+> "Lance le setup-check pour vérifier mes dépendances."
+
+### 9. Débogage (`debugging-workflow`)
+
+**Utilisez ceci pour** : Trouver systématiquement la cause racine d'un bug.
+**Commande** :
+> "Lance le debugging-workflow pour corriger l'erreur de login."
+
+### 10. Audit de Performance (`performance-audit`)
+
+**Utilisez ceci pour** : Analyser la performance et la taille du bundle.
+**Commande** :
+> "Fais un performance-audit sur l'application."
+
+### 11. Release Manager (`release-manager`)
+
+**Utilisez ceci pour** : Automatiser la release (version, changelog, tag).
+**Commande** :
+> "Utilise le release-manager pour livrer la v1.2.0."
 
 ## Conseils pour de meilleurs résultats
 
